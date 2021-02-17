@@ -95,11 +95,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   uint8_t X=0;
-  uint8_t MSG[25] = {'\0'};
 
   while (1)
   {
     /* USER CODE END WHILE */
+	  	 uint8_t MSG[25] = {'\0'};
 	     sprintf(MSG, "Tracing X = %d\n", X);
 	     HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
 	     HAL_Delay(500);
